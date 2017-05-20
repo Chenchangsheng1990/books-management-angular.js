@@ -1,0 +1,13 @@
+<h4 class="well text-left">查找用户界面</h4>
+<!--<div ng-controller="searchCtrl">
+    <input type="text" ng-model="users">
+    {{users}}
+    </div>-->
+<div ng-controller="searchCtrl">
+    <form name="searchuserform">
+    按照用户名查找：<input type="text" ng-model="search.username" required name="searchuserinput">
+    <div ng-repeat="user in users | filter : search : strict" ng-if="searchuserform.searchuserinput.$valid" >
+        编号：{{user.id}}, 用户名：{{user.username}}， 等级：{{user.level}}， 积分：{{user.score}}，地址：{{user.address}}，电话号码：{{user.phone}}
+    </div>
+    </form>
+</div>

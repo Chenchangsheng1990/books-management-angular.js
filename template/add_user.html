@@ -1,0 +1,26 @@
+<div ng-controller="adduserctrl">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h4 class="well text-left">添加用户界面</h4>
+                <form name="adduserform">
+                    <div class="input-group" ng-class="{'has-error':adduserform.username.$invalid}">
+                        <div class="input-group-addon"><i class="glyphicon glyphicon-user"></i></div>
+                        <input type="text" name="username" class="form-control" placeholder="用户名" required ng-model="adduser.username">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></div>
+                        <input type="password" name="password" class="form-control" placeholder="密码" required ng-model="adduser.password">
+                    </div>
+                    <div>
+                        <button class="btn btn-success btn-block" ng-disabled="adduserform.$invalid" ng-click="adduser()">添加</button>
+                    </div>
+                    <!--<input type="text" placeholder="用户名" required ng-model="adduser.username"><br>
+        <input type="password" placeholder="密码" required ng-model="adduser.password"><br>
+        <input type="submit" value="添加" ng-disabled="adduserform.$invalid" ng-click="adduser()">-->
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
